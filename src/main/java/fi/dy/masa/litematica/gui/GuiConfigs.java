@@ -19,6 +19,8 @@ import fi.dy.masa.malilib.gui.button.IButtonActionListener;
 import fi.dy.masa.malilib.gui.interfaces.IConfigGuiAllTab;
 import fi.dy.masa.malilib.util.StringUtils;
 
+import fi.dy.masa.malilib.hotkeys.KeybindSettings;
+
 public class GuiConfigs extends GuiConfigsBase implements IConfigGuiAllTab
 {
     public GuiConfigs()
@@ -174,6 +176,14 @@ public class GuiConfigs extends GuiConfigsBase implements IConfigGuiAllTab
     protected void onSettingsChanged()
     {
         super.onSettingsChanged();
+
+        KeybindSettings settings = Hotkeys.PICK_BLOCK_FIRST.getKeybind().getSettings();
+        KeybindSettings settingsNew = KeybindSettings.create(settings.getContext(), settings.getActivateOn(), settings.getAllowExtraKeys(), settings.isOrderSensitive(), settings.isExclusive(), true, settings.getAllowEmpty());
+        Hotkeys.PICK_BLOCK_FIRST.getKeybind().setSettings(settingsNew);
+
+        settings = Hotkeys.PICK_BLOCK_LAST.getKeybind().getSettings();
+        settingsNew = KeybindSettings.create(settings.getContext(), settings.getActivateOn(), settings.getAllowExtraKeys(), settings.isOrderSensitive(), settings.isExclusive(), true, settings.getAllowEmpty());
+        Hotkeys.PICK_BLOCK_LAST.getKeybind().setSettings(settingsNew);
 
         SchematicWorldRefresher.INSTANCE.updateAll();
     }
