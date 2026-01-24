@@ -123,6 +123,7 @@ public class EasyPlaceUtils
 
     public static void easyPlaceOnUseTick()
     {
+        /*
 //        InputUtil.Key useKey = ((IMixinKeyBinding) MinecraftClient.getInstance().options.useKey).litematica_getBoundKey();
 
         if (isHandling == false &&
@@ -138,10 +139,13 @@ public class EasyPlaceUtils
             handleEasyPlace();
             isHandling = false;
         }
+        */
     }
 
     public static boolean handleEasyPlaceWithMessage()
     {
+        return false;
+    /*
         if (isHandling())
         {
             return false;
@@ -176,6 +180,7 @@ public class EasyPlaceUtils
 		isFirstClickEasyPlace = false;
 
 		return result != InteractionResult.PASS;
+        */
     }
 
     public static void onRightClickTail()
@@ -436,6 +441,8 @@ public class EasyPlaceUtils
 
     private static InteractionResult handleEasyPlace()
     {
+        return InteractionResult.FAIL;
+        /*
         Minecraft mc = Minecraft.getInstance();
         Entity entity = mc.getCameraEntity();
         ClientLevel world = mc.level;
@@ -667,6 +674,7 @@ public class EasyPlaceUtils
 		}
 
         return InteractionResult.PASS;
+        */
     }
 
     private static boolean clientBlockIsSameMaterialSingleSlab(BlockState stateSchematic, BlockState stateClient)
