@@ -692,6 +692,7 @@ public class WorldUtils
     @Deprecated
     public static void easyPlaceOnUseTick(Minecraft mc)
     {
+        /*
         if (mc.player != null && DataManager.getToolMode() != ToolMode.REBUILD &&
             Configs.Generic.EASY_PLACE_MODE.getBooleanValue() &&
             Configs.Generic.EASY_PLACE_HOLD_ENABLED.getBooleanValue() &&
@@ -700,6 +701,7 @@ public class WorldUtils
         {
             WorldUtils.doEasyPlaceAction(mc);
         }
+        */
     }
 
     /**
@@ -708,6 +710,7 @@ public class WorldUtils
     @Deprecated
     public static boolean handleEasyPlace(Minecraft mc)
     {
+        /*
         if (Configs.Generic.EASY_PLACE_MODE.getBooleanValue() &&
             Configs.Generic.EASY_PLACE_POST_REWRITE.getBooleanValue() == false &&
             DataManager.getToolMode() != ToolMode.REBUILD)
@@ -732,6 +735,7 @@ public class WorldUtils
 
             return result != InteractionResult.PASS;
         }
+        */
 
         return false;
     }
@@ -742,6 +746,8 @@ public class WorldUtils
     @Deprecated
     private static InteractionResult doEasyPlaceAction(Minecraft mc)
     {
+        return InteractionResult.FAIL;
+        /*
         RayTraceWrapper traceWrapper;
         double traceMaxRange = getValidBlockRange(mc);
 
@@ -912,6 +918,7 @@ public class WorldUtils
         }
 
         return InteractionResult.PASS;
+        */
     }
 
     /**
