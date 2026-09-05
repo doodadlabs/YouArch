@@ -690,7 +690,7 @@
     "litematica.gui.button.change_menu.show_loaded_schematics": "Loaded Schematics",
     "litematica.gui.button.change_menu.show_schematic_placements": "Schematic Placements",
     "litematica.gui.button.change_menu.task_manager": "Task Manager",
-    "litematica.gui.button.change_menu.to_main_menu": "YouArch (Litematica) menu",
+    "litematica.gui.button.change_menu.to_main_menu": "YouArch menu",
     "litematica.gui.button.config_gui.colors": "Colors",
     "litematica.gui.button.config_gui.generic": "Generic",
     "litematica.gui.button.config_gui.hotkeys": "Hotkeys",
